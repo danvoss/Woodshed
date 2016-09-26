@@ -12,7 +12,7 @@ public class Streams {
 
     public static void main(String[] args) {
 
-        // from tutorialspoint.com
+        // from tutorialspoint.com/java8
 
         List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
         List<Integer> squaresList = numbers.stream()
