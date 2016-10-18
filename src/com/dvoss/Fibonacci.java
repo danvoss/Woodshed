@@ -5,7 +5,7 @@ package com.dvoss;
  */
 public class Fibonacci {
 
-    static int fibR(int n) throws Exception {
+    private static int fibR(int n) throws Exception {
         if (n < 0) {
             throw new Exception("Choose a whole number.");
         }
@@ -18,7 +18,7 @@ public class Fibonacci {
         return fibR(n - 1) + fibR(n - 2);
     }
 
-    static int fibI(int n) throws Exception {
+    private static int fibI(int n) throws Exception {
         if (n < 0) {
             throw new Exception("Choose a whole number.");
         }
