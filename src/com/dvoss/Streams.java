@@ -32,5 +32,9 @@ public class Streams {
                 .limit(10)
                 .sorted()
                 .forEach(System.out::println);
+
+        String myString = "1000";
+        int myInt = Integer.valueOf(myString);
+        System.out.println(myInt);
     }
 }
