@@ -13,8 +13,8 @@ public class WebShed {
 
     public static void main(String[] args) throws IOException {
 
-        // uses InputStreamReader to read html with URL object
-        // from Niemeyer and Leuck
+        /* uses InputStreamReader to read html with URL object
+           from Niemeyer and Leuck */
 
         URL u = new URL("https://danvoss.github.io/index.html");
         BufferedReader b = new BufferedReader(new InputStreamReader(u.openStream()));

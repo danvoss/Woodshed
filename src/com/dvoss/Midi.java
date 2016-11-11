@@ -22,9 +22,9 @@ public class Midi {
         synth.loadAllInstruments(sb);
         Instrument[] inst = synth.getLoadedInstruments();
 
-        // show list of all instruments:
+//         show list of all instruments:
 //        for (int i=0; i<inst.length; i++ ) {
-//            System.out.println(inst[i].getName());
+//            System.out.println(i + ": " + inst[i].getName());
 //        }
 
         //set a new instrument (eg, electric piano):
