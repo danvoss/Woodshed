@@ -28,7 +28,7 @@ public class Midi {
 //        }
 
         //set a new instrument (eg, electric piano):
-        Patch p = inst[5].getPatch();
+        Patch p = inst[4].getPatch();
         MidiChannel[] mc = synth.getChannels();
         mc[1].programChange(p.getBank(), p.getProgram());
         mc[1].noteOn(60, 200);
