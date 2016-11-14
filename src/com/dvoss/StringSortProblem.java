@@ -6,9 +6,8 @@ package com.dvoss;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Fog Creek problem:
@@ -40,5 +39,27 @@ public class StringSortProblem {
                 letters.add(String.valueOf(line.charAt(i)));
             }
         }
+
+        HashMap<String, Integer> freqMap = new LinkedHashMap<>();
+        for (Map.Entry<String, ArrayList<String>> entry : map.entrySet()) {
+            freqMap.put(entry.getKey(), entry.getValue().size());
+        }
+
+        freqMap = freqMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new
+                ));
+
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<String, Integer> freqEntry : freqMap.entrySet()) {
+            sb.append(freqEntry.getKey());
+        }
+
+        System.out.println(sb.substring(0, sb.indexOf("_")));
+
     }
 }
