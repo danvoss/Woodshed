@@ -1,7 +1,6 @@
 package com.dvoss.rabbitmq;
 
 import com.rabbitmq.client.*;
-import com.rabbitmq.client.impl.AMQBasicProperties;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
