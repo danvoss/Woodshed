@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by Dan on 9/26/16.
@@ -36,5 +37,10 @@ public class Streams {
         String myString = "1000";
         int myInt = Integer.valueOf(myString);
         System.out.println(myInt);
+
+        // some others
+
+        Stream<Double> randoms = Stream.generate(Math::random).limit(5);
+        randoms.forEach(System.out::println);
     }
 }
